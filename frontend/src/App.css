@@ -19,10 +19,19 @@
 .container{
     width: 50vw;
     min-width: 320px;
-    height: 50vh;
-    /* min-height: 80vh; */
     background: #c6c6c6;
     opacity: 0.5;
+}
+
+.search_box{
+    display: grid;
+    place-items: center;
+    padding: 10px 0;  
+}
+
+.search_box > input, .search_box > button{
+    padding: 20px 10px;    
+    font-size: 1rem;
 }
 
 .top{
