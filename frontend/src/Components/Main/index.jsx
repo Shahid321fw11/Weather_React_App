@@ -47,7 +47,7 @@ const Main = () => {
 						<p className={styles.name}>{data.name}</p>
 						{data.main ? <p className={styles.temp}>{data.main.temp}°F</p> : null}
 						{data.weather ? (
-							<p className={styles.description}>{data.weather[0].main}</p>
+							<p className={styles.description}>{data.weather[0].description}</p>
 						) : null}
 					</div>
 
