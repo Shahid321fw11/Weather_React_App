@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 
 const Signup = () => {
-  const api = "https://weather-react-app-shahid321fw11.vercel.app/";
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -20,7 +19,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `${api}/api/users`;
+      const url = "http://localhost:8080/api/users";
       const { data: res } = await axios.post(url, data);
       navigate("/login");
       console.log(res.message);
