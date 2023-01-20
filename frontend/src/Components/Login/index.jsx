@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 const Login = () => {
-  const BASE_URL = "https://weather-react-app-backend-rzuu.onrender.com";
   const [data, setData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
@@ -15,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `${BASE_URL}/api/auth`;
+      const url = `http://localhost:8080/api/auth`;
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
       window.location = "/";
